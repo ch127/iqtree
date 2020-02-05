@@ -1,0 +1,11 @@
+BootStrap: docker
+From: hurwitzlab/iqtree:1.6.12
+
+%runscript
+    exec /usr/local/bin/iqtree "$@"
+
+%post
+    # Mount points for TACC directories
+    mkdir /home1
+    mkdir /scratch
+    mkdir /work
